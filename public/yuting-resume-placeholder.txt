@@ -1,0 +1,6 @@
+Yu Ting Resume Placeholder
+
+This is a temporary resume download file for the portfolio website.
+Replace this file with a real PDF resume later, for example:
+
+public/yuting-resume.pdf
