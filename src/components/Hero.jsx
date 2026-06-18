@@ -1,26 +1,5 @@
-import { useState } from 'react';
+import JobMatcher from './JobMatcher.jsx';
 import profile from '../data/profile.js';
-
-function AvatarImage({ content }) {
-  const [hasError, setHasError] = useState(false);
-
-  if (!content.avatarImage || hasError) {
-    return (
-      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-md bg-slate-950 text-xl font-black text-white">
-        {content.initials}
-      </div>
-    );
-  }
-
-  return (
-    <img
-      className="h-16 w-16 shrink-0 rounded-md object-cover"
-      src={content.avatarImage}
-      alt={`${content.name} avatar`}
-      onError={() => setHasError(true)}
-    />
-  );
-}
 
 function Hero({ language }) {
   const content = profile[language];
@@ -50,31 +29,7 @@ function Hero({ language }) {
           </div>
         </div>
 
-        <div className="min-w-0 rounded-lg border border-white/10 bg-white/95 p-4 shadow-soft dark:bg-slate-900/95 sm:p-5">
-          <div className="relative rounded-md border border-slate-200 bg-[#f8fafc] p-6 dark:border-slate-700 dark:bg-slate-950">
-            <div className="mb-8 flex items-center gap-4">
-              <AvatarImage content={content} />
-              <div className="min-w-0">
-                <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">{content.labels.portfolioSnapshot}</p>
-                <h2 className="break-words text-2xl font-black text-slate-950 dark:text-white">{content.name}</h2>
-                <p className="mt-1 break-words text-sm font-semibold text-slate-500 dark:text-slate-400">{content.tagline}</p>
-              </div>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {content.stats.map((stat, index) => (
-                <div key={stat.label} className="rounded-md border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-900">
-                  <p className={`text-3xl font-black ${index === 0 ? 'text-teal-700' : 'text-amber-600'}`}>{stat.value}</p>
-                  <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-5 rounded-md bg-slate-950 p-5 text-white">
-              <p className="text-sm text-slate-300">{content.labels.currentFocus}</p>
-              <p className="mt-2 text-xl font-bold">{content.focus}</p>
-            </div>
-            <img className="mt-5 aspect-[4/3] w-full rounded-md border border-slate-200 object-cover" src={content.profileImage} alt={`${content.name} portfolio preview`} />
-          </div>
-        </div>
+        <JobMatcher />
       </div>
     </section>
   );
