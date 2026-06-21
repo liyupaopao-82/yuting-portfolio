@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import profile from '../data/profile.js';
 
-function Navbar({ language, onLanguageChange, theme, onThemeToggle }) {
+function Navbar({ language, theme, onThemeToggle }) {
   const content = profile[language];
   const themeLabel = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
 
@@ -13,23 +13,6 @@ function Navbar({ language, onLanguageChange, theme, onThemeToggle }) {
         </Link>
         <div className="flex flex-col gap-2 lg:items-end">
           <div className="flex flex-wrap gap-2">
-            <div className="flex rounded-md border border-slate-200 bg-slate-50 p-1 dark:border-slate-700 dark:bg-slate-900">
-              {profile.languageOptions.map((option) => (
-                <button
-                  key={option.value}
-                  className={`min-h-9 rounded px-3 text-xs font-bold transition ${
-                    language === option.value
-                      ? 'bg-slate-950 text-white dark:bg-white dark:text-slate-950'
-                      : 'text-slate-600 hover:bg-white hover:text-teal-700 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-teal-300'
-                  }`}
-                  type="button"
-                  aria-pressed={language === option.value}
-                  onClick={() => onLanguageChange(option.value)}
-                >
-                  {option.label}
-                </button>
-              ))}
-            </div>
             <button
               className="min-h-10 rounded-md border border-slate-200 bg-slate-50 px-3 text-xs font-bold text-slate-700 transition hover:bg-white hover:text-teal-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-teal-300"
               type="button"

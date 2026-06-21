@@ -14,12 +14,22 @@ function Contact({ language }) {
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
-          {content.contacts.map((item) => (
-            <a key={item.label} className="content-card transition hover:border-teal-300 hover:shadow-soft" href={item.href}>
-              <p className="text-sm font-bold text-slate-500 dark:text-slate-400">{item.label}</p>
-              <p className="mt-3 break-words text-base font-black leading-7 text-slate-950 dark:text-white sm:text-lg">{item.value}</p>
-            </a>
-          ))}
+          {content.contacts.map((item) => {
+            const isDownload = item.href?.endsWith('.pdf');
+            const CardTag = isDownload ? 'a' : 'div';
+
+            return (
+              <CardTag
+                key={item.label}
+                className={`content-card ${isDownload ? 'transition hover:border-teal-300 hover:shadow-soft' : ''}`}
+                href={isDownload ? item.href : undefined}
+                download={isDownload || undefined}
+              >
+                <p className="text-sm font-bold text-slate-500 dark:text-slate-400">{item.label}</p>
+                <p className="mt-3 break-words text-base font-black leading-7 text-slate-950 dark:text-white sm:text-lg">{item.value}</p>
+              </CardTag>
+            );
+          })}
         </div>
       </div>
     </section>

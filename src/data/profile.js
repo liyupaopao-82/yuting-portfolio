@@ -1,20 +1,16 @@
 const sharedAssets = {
   initials: 'YL',
-  email: 'liyupaopao82@gmail.com',
+  email: 'yuting_0802@163.com',
   resumePath: '/resume/Yuting_Li_Resume.pdf',
   avatarImage: '/images/avatar.jpg',
   profileImage: '/profile-mark.svg',
 };
 
 const profile = {
-  languageOptions: [
-    { value: 'en', label: 'English' },
-    { value: 'zh', label: '中文' },
-  ],
   en: {
     ...sharedAssets,
     name: 'Yuting Li / 李雨婷',
-    role: 'Computer Science Graduate Student',
+    role: 'Computer Science and Technology (Artificial Intelligence Concentration)',
     tagline: 'Data Analysis · AI Product · User Operations · Sales Operations',
     location: 'Open to data, product, and operations roles',
     heroEyebrow: 'Data Analysis · AI Product · Operations',
@@ -33,15 +29,15 @@ const profile = {
     ],
     navItems: [
       { label: 'Home', href: '#home' },
-      { label: 'About', href: '#about' },
+      { label: 'Education', href: '#education' },
       { label: 'Experience', href: '#experience' },
       { label: 'Projects', href: '#projects' },
       { label: 'Skills', href: '#skills' },
-      { label: 'Resume', href: '#resume' },
-      { label: 'Contact', href: '#contact' },
+      { label: 'Learning and Exploration', href: '#learning' },
+      { label: 'Contact Me', href: '#contact' },
     ],
     sections: {
-      about: { kicker: 'About', title: 'About Me' },
+      about: { kicker: 'About Me', title: 'About Me' },
       experience: { kicker: 'Experience', title: 'Experience' },
       projects: {
         kicker: 'Projects',
@@ -57,8 +53,8 @@ const profile = {
         button: 'Download Resume',
       },
       contact: {
-        kicker: 'Contact',
-        title: 'Contact',
+        kicker: 'Contact Me',
+        title: 'Contact Me',
         description:
           'Feel free to reach out for data analysis, AI product, user operations, or sales operations opportunities.',
       },
@@ -73,7 +69,7 @@ const profile = {
       },
     },
     buttons: {
-      viewProjects: 'View Projects',
+      downloadResume: 'Download Resume',
       contactMe: 'Contact Me',
       backToTop: 'Back to Top',
     },
@@ -84,19 +80,19 @@ const profile = {
       imagePlaceholder: 'Project image placeholder',
     },
     contacts: [
-      { label: 'Email', value: 'liyupaopao82@gmail.com', href: 'mailto:liyupaopao82@gmail.com' },
-      { label: 'Focus', value: 'Data Analysis · AI Product · Operations', href: '#skills' },
+      { label: 'Email', value: 'yuting_0802@163.com', href: 'yuting_0802@163.com' },
+      { label: 'Phone', value: '19803421108 (same WeChat ID)', href: 'tel:' },
       { label: 'Resume', value: 'Download resume', href: '/resume/Yuting_Li_Resume.pdf' },
     ],
   },
   zh: {
     ...sharedAssets,
-    name: 'Yuting Li / 李雨婷',
-    role: '计算机科学研究生',
+    name: '李雨婷 / Yuting Li',
+    role: '计算机科学与技术（人工智能）',
     tagline: '数据分析 · AI 产品 · 用户运营 · 销售运营',
     location: '关注数据、产品与运营相关机会',
     heroEyebrow: '数据分析 · AI 产品 · 运营增长',
-    heroTitle: 'Yuting Li / 李雨婷',
+    heroTitle: '李雨婷 / Yuting Li',
     heroIntro: '我关注如何将数据、AI 模型与真实业务场景转化为可落地的产品方案和运营洞察。',
     about: [
       '我是一名计算机科学研究生，具备数据分析、AI 产品思维、用户运营和智能系统项目经验。',
@@ -110,22 +106,22 @@ const profile = {
     ],
     navItems: [
       { label: '首页', href: '#home' },
-      { label: '关于我', href: '#about' },
-      { label: '经历', href: '#experience' },
-      { label: '项目', href: '#projects' },
+      { label: '教育背景', href: '#education' },
+      { label: '实习经历', href: '#experience' },
+      { label: '项目经历', href: '#projects' },
       { label: '技能', href: '#skills' },
-      { label: '简历', href: '#resume' },
-      { label: '联系', href: '#contact' },
+      { label: '学习与探索', href: '#learning' },
+      { label: '联系我', href: '#contact' },
     ],
     sections: {
       about: { kicker: 'About', title: '关于我' },
       experience: { kicker: 'Experience', title: '实习经历' },
       projects: {
         kicker: 'Projects',
-        title: '项目作品',
+        title: '项目经历',
         intro: '精选项目覆盖业务运营、AI 应用、计算机视觉和数据可视化方向。',
       },
-      skills: { kicker: 'Skills', title: '技能栈' },
+      skills: { kicker: 'Skills', title: '技能' },
       resume: {
         kicker: 'Resume',
         title: '简历下载',
@@ -133,8 +129,8 @@ const profile = {
         button: '下载简历',
       },
       contact: {
-        kicker: 'Contact',
-        title: '联系方式',
+        kicker: 'Contact Me',
+        title: '联系我',
         description: '欢迎就数据分析、AI 产品、用户运营或销售运营相关机会与我联系。',
       },
       projectDetail: {
@@ -148,7 +144,7 @@ const profile = {
       },
     },
     buttons: {
-      viewProjects: '查看项目',
+      downloadResume: '下载简历',
       contactMe: '联系我',
       backToTop: '返回顶部',
     },
@@ -159,8 +155,8 @@ const profile = {
       imagePlaceholder: '项目图片占位',
     },
     contacts: [
-      { label: '邮箱', value: 'liyupaopao82@gmail.com', href: 'mailto:liyupaopao82@gmail.com' },
-      { label: '方向', value: '数据分析 · AI 产品 · 运营增长', href: '#skills' },
+      { label: '邮箱', value: 'yuting_0802@163.com', href: 'mailto:yuting_0802@163.com' },
+      { label: '电话', value: '19803421108（微信同号）', href: 'tel:' },
       { label: '简历', value: '下载简历', href: '/resume/Yuting_Li_Resume.pdf' },
     ],
   },
